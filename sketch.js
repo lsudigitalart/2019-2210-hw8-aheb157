@@ -2,11 +2,7 @@
 var body1, body2, body3, body4, body5;
 var eyes1, eyes2, eyes3, eyes4, eyes5;
 var mouth1, mouth2, mouth3, mouth4, mouth5;
-var bodys = 1;
-var show = 0;
-var eyes =1;
-var show =0;
-var mouths =1;
+
 var show = 0;
 var bodyChoice;
 var eyeChoice;
@@ -39,23 +35,70 @@ imageMode(CENTER);
 }
 
 function draw(){
-  background(0);
-
-if (show ==1){
+  background(100);
+if (show == 1){
     creature (bodyChoice, eyeChoice, mouthChoice);
 }
 }  
 
-function mousePressed(){
-    bodyChoice = int(random(6));
-    eyeChoice = int(random(6));
-    mouthChoice = int(random(6));
+function mouseReleased(){
+    bodyChoice = int(random(5));
+    eyeChoice = int(random(5));
+    mouthChoice = int(random(5));
    show = 1;
 }
 
-function creature( body, eye, mouth){
-    image(bodys[body], width/2, height/2);
-    image(eyess[eye], width/2, (height/2) + 100);
-    image(mouths[mouth], width/2, (height/2) - 100);
+function creature(body, eye, mouth){
+    print (body, eye, mouth);
+    
+    if(body == 0 ){
+       
+        image (body1, width/2, height/2); 
+    }
+    if(body == 1 ){
+        
+        image (body2, width/2, height/2);  
+    }
+    if(body == 2 ){
+       
+        image (body3, width/2, height/2);  
+    }
+    if(body == 3 ){
+        
+        image (body4, width/2, height/2);  
+    }
+    if(body == 4 ){
+       
+        image (body5, width/2, height/2);  
+    }
+    if(eye == 0 ){
+        image (eyes1, width/2, height/2);  
+    }
+    if(eye == 1 ){
+        image (eyes2, width/2, height/2);  
+    }
+    if(eye == 2 ){
+        image (eyes3, width/2, height/2);  
+    }
+    if(eye == 3 ){
+        image (eyes4, width/2, height/2);  
+    }
+    if(eye == 4 ){
+        image (eyes5, width/2, height/2);  
 }
-
+if(mouth == 0 ){
+    image (mouth1, width/2, height/2);  
+}
+if(mouth == 1 ){
+    image (mouth2, width/2, height/2);  
+}
+if(mouth == 2 ){
+    image (mouth3, width/2, (height/2)+20);  
+}
+if(mouth == 3 ){
+    image (mouth4, width/2, (height/2) -20);  
+}
+if(mouth == 4) {
+    image (mouth5, width/2, (height/2) + 20);  
+}
+}
